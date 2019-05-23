@@ -77,25 +77,25 @@ function dependencies {
 
 function dns-brute {
     echo -e "$GREEN[*] Starting DNS BRUTE SCRIPT $WHITE\n"
-    nmap -p 80,443 --script dns-brute.nse -v $DOMAIN
+    nmap -p 80,443 --script dns-brute.nse $DOMAIN
     echo -e "$GREEN[*] Finished DNS BRUTE SCRIPT $WHITE\n"
 }
 
 function https-enums {
     echo -e "$GREEN[*] Starting HTTP-ENUM SCRIPT $WHITE\n"
-    nmap --script http-enum -v $DOMAIN
+    nmap --script http-enum $DOMAIN
     echo -e "$GREEN[*] Finished HTTP-ENUM SCRIPT $WHITE\n"
 }
 
 function banner-plus {
     echo -e "$GREEN[*] Starting BANNER-PLUS SCRIPT $WHITE\n"
-    nmap $DOMAIN --script=banner-plus -v
+    nmap $DOMAIN --script=banner-plus 
     echo -e "$GREEN[*] Finished BANNER-PLUS SCRIPT $WHITE\n"
 }
 
 function vuln-scan-vulners {
     echo -e "$GREEN[*] Starting VULNERS SCRIPT $WHITE\n"
-    nmap -sV --script=vulscan/vulscan.nse -v $DOMAIN
+    nmap -sV --script=vulscan/vulscan.nse $DOMAIN
     echo -e "$GREEN[*] Finished VULNERS SCRIPT $WHITE\n"
 }
 

@@ -13,6 +13,9 @@ small Bash script to RECON a domain with NSE scripts for penetration testing.
 * nmap **sudo apt install nmap**
 * vulnscan & vulners scricpt & banner-plus
 
+## install script
+./install.sh
+
 ###### install vulners & vulscan
 ```
 # banner plus install
